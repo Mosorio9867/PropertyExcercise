@@ -17,5 +17,7 @@ namespace PropertyExercise.Services.DTO
         public required string Year { get; set; }
         [DefaultValue(1)]
         public required int IdOwner { get; set; }
+        public required DateTime DateSale { get; set; } = DateTime.Now;
+        public required decimal Tax { get; set; } = 0;
     }
 }

@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PropertyController.cs",
-              "DocumentMoniker": "C:\\Users\\Ingeneo\\source\\repos\\PropertyExercise\\PropertyExercise\\Controllers\\PropertyController.cs",
-              "RelativeDocumentMoniker": "PropertyExercise\\Controllers\\PropertyController.cs",
-              "ToolTip": "C:\\Users\\Ingeneo\\source\\repos\\PropertyExercise\\PropertyExercise\\Controllers\\PropertyController.cs",
-              "RelativeToolTip": "PropertyExercise\\Controllers\\PropertyController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCkAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T14:26:55.668Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -41,9 +28,22 @@
               "RelativeDocumentMoniker": "PropertyExercise\\Services\\PropertyService.cs",
               "ToolTip": "C:\\Users\\Ingeneo\\source\\repos\\PropertyExercise\\PropertyExercise\\Services\\PropertyService.cs",
               "RelativeToolTip": "PropertyExercise\\Services\\PropertyService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAMwDoAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAALkAAAAAAAAAAAAewMwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T13:46:43.923Z",
+              "WhenOpened": "2025-01-28T17:23:00.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PropertyController.cs",
+              "DocumentMoniker": "C:\\Users\\Ingeneo\\source\\repos\\PropertyExercise\\PropertyExercise\\Controllers\\PropertyController.cs",
+              "RelativeDocumentMoniker": "PropertyExercise\\Controllers\\PropertyController.cs",
+              "ToolTip": "C:\\Users\\Ingeneo\\source\\repos\\PropertyExercise\\PropertyExercise\\Controllers\\PropertyController.cs",
+              "RelativeToolTip": "PropertyExercise\\Controllers\\PropertyController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wB4AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T17:20:53.916Z",
               "EditorCaption": ""
             }
           ]

@@ -870,6 +870,14 @@
             "type": "integer",
             "format": "int32",
             "default": 1
+          },
+          "dateSale": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tax": {
+            "type": "number",
+            "format": "decimal"
           }
         }
       },

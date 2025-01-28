@@ -303,3 +303,4 @@ C:\Users\Ingeneo\source\repos\PropertyExercise\PropertyExercise\obj\Debug\net8.0
 C:\Users\Ingeneo\source\repos\PropertyExercise\PropertyExercise\obj\Debug\net8.0\PropertyExercise.pdb
 C:\Users\Ingeneo\source\repos\PropertyExercise\PropertyExercise\obj\Debug\net8.0\PropertyExercise.genruntimeconfig.cache
 C:\Users\Ingeneo\source\repos\PropertyExercise\PropertyExercise\obj\Debug\net8.0\ref\PropertyExercise.dll
+C:\Users\Ingeneo\source\repos\PropertyExercise\PropertyExercise\obj\Debug\net8.0\PropertyExercise.sourcelink.json

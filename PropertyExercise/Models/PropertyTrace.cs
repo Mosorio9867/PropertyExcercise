@@ -14,6 +14,6 @@ namespace PropertyExercise.Models
         public required string Name { get; set; } 
         public required decimal Value { get; set; } 
         public required decimal Tax { get; set; } 
-        public required virtual Property PropertyEntity { get; set; }
+        public virtual Property? PropertyEntity { get; set; }
     }
 }

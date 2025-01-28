@@ -9,7 +9,6 @@ namespace PropertyExercise.Services
 {
     public class PropertyService : IPropertyService
     {
-
         private readonly ApplicationDbContext _context;
 
         public PropertyService(ApplicationDbContext context)
@@ -28,28 +27,40 @@ namespace PropertyExercise.Services
             try
             {
                 // Check if a property with the same name already exists in the database.
-                Property? property = _context.Properties
+                Property? propertyFind = _context.Properties
                     .FirstOrDefault(x => x.Name.Equals(propertyDto.Name));
 
                 // If a property with the same name exists, throw an exception.
-                if (property != null)
+                if (propertyFind != null)
                     throw new Exception("A property already exists with the information entered, please verify.");
 
                 // Retrieve the owner related to the property using the owner's ID.
                 Owner owner = await GetOwner(propertyDto.IdOwner);
 
-                // Add the new property to the database.
-                _context.Properties.Add(new Property()
+                Property property = new Property()
                 {
                     Name = propertyDto.Name,
                     Address = propertyDto.Address,
                     Price = propertyDto.Price,
                     CodeInternal = propertyDto.CodeInternal,
                     Year = propertyDto.Year,
-                    IdOwner = owner.IdOwner,
-                });
+                    IdOwner = owner.IdOwner
+                };
+                // Add the new property to the database.
+                _context.Properties.Add(property);
 
                 // Save the changes made to the database.
+                await _context.SaveChangesAsync();
+
+                _context.PropertyTraces.Add(new PropertyTrace()
+                {
+                    IdProperty = property.IdProperty,
+                    Name = propertyDto.Name,
+                    DateSale = propertyDto.DateSale,
+                    Value = propertyDto.Price,
+                    Tax = propertyDto.Tax
+                });
+
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
@@ -149,6 +160,15 @@ namespace PropertyExercise.Services
                 // Update the property in the database.
                 _context.Properties.Update(property);
 
+                _context.PropertyTraces.Add(new PropertyTrace()
+                {
+                    IdProperty = property.IdProperty,
+                    Name = propertyDto.Name,
+                    DateSale = propertyDto.DateSale,
+                    Value = propertyDto.Price,
+                    Tax = propertyDto.Tax
+                });
+
                 // Save the changes made to the database.
                 await _context.SaveChangesAsync();
             }
@@ -181,7 +201,9 @@ namespace PropertyExercise.Services
                     Price = x.Price,
                     CodeInternal = x.CodeInternal,
                     Year = x.Year,
-                    IdOwner = x.IdOwner
+                    IdOwner = x.IdOwner,
+                    DateSale = DateTime.Now,
+                    Tax = 0
                 })
                 .ToListAsync();
 

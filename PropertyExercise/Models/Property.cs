@@ -19,7 +19,8 @@ namespace PropertyExercise.Models
         [ForeignKey("OwnerEntity")]
         public required int IdOwner { get; set; }
         public virtual Owner? OwnerEntity { get; set; }
-        public virtual ICollection<PropertyImage>? PropertyImagesEntities { get; set; }
+        public virtual ICollection<PropertyImage> PropertyImagesEntities { get; set; } = new List<PropertyImage>();
+        public virtual ICollection<PropertyTrace> PropertyTraceEntities { get; set; } = new List<PropertyTrace>();
 
     }
 }
