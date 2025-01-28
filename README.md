@@ -1,34 +1,31 @@
-.NET 8 PropertyExcercice
+# .NET 8 PropertyExcercice
 This is an example project developed with .NET 8. The purpose of this repository is to demonstrate a basic structure and common features of a .NET 8 application.
 
-Description
-This project is designed to showcase how to create and structure an application using .NET 8. It includes a simple API, basic configurations, and examples of integration with databases, authentication, and unit tests.
-
-Requirements
+# Requirements
 .NET 8 SDK or higher
 Visual Studio 2022 or higher (optional)
 SQL Server or any database compatible with Entity Framework Core (optional, depending on your setup)
 Installation
 To get started with this project, follow these steps:
 
-1. Clone the repository
+# 1. Clone the repository
 
 git clone https://github.com/username/dotnet8-project.git
 cd dotnet8-project
 
-2. Restore NuGet packages
+# 2. Restore NuGet packages
 dotnet restore
 
 
-3. Build the project
+# 3. Build the project
 dotnet build
 
 
-4. Run the application
+# 4. Run the application
 dotnet run
 
 
-Project Structure
+# Project Structure
 The project follows a commonly used structure in .NET applications with the following organization:
 
 /Controllers: Contains the API controllers.
@@ -38,7 +35,7 @@ The project follows a commonly used structure in .NET applications with the foll
 /Tests: Unit testing project.
 
 
-Endpoints
+# Endpoints
 Here’s a list of available API endpoints:
 
 GET /api/GetProperties: Retrieves a list of properties.
@@ -48,10 +45,10 @@ PUT /api/{idProperty}/ChangePrice: Change price of property
 PUT /api/{idProperty}/UpdateProperty: Change object of property
 
 
-Database
+# Database
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 
 
-Testing
+# Testing
 dotnet test
